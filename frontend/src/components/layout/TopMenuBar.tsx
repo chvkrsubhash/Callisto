@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import {
   ChevronDown,
-  Home,
 } from 'lucide-react';
 import { useDiagramStore } from '../../store/diagramStore';
 import { applyAutomaticLayout } from '../../engines/layoutEngine';
@@ -132,7 +131,7 @@ export const TopMenuBar: React.FC = () => {
           title="Return to Callisto Dashboard"
           className="flex items-center gap-1.5 px-2 py-1 rounded hover:bg-slate-200/70 font-semibold text-slate-800"
         >
-          <Home className="w-3.5 h-3.5 text-slate-600" />
+          <img src="/callisto-logo.png" alt="Callisto" className="w-4 h-4 rounded-xs object-contain" />
           <span>Callisto</span>
         </button>
 

@@ -60,12 +60,19 @@ export const DashboardView: React.FC = () => {
         }}
       >
         <div className="space-y-4">
-          <div className="px-2 py-1">
-            <div className="font-bold text-base tracking-tight text-slate-900">
-              Callisto
-            </div>
-            <div className="text-[11px] text-slate-500">
-              A product of AkashaVyom Labs
+          <div className="px-2 py-1 flex items-center gap-2.5">
+            <img
+              src="/callisto-logo.png"
+              alt="Callisto Logo"
+              className="w-8 h-8 rounded object-contain shrink-0"
+            />
+            <div>
+              <div className="font-bold text-base tracking-tight text-slate-900">
+                Callisto
+              </div>
+              <div className="text-[11px] text-slate-500">
+                A product of AkashaVyom Labs
+              </div>
             </div>
           </div>
 
