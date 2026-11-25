@@ -1,0 +1,100 @@
+@import "tailwindcss";
+@import "@xyflow/react/dist/style.css";
+
+:root {
+  color-scheme: light only;
+  --callisto-accent: #475569;
+  --callisto-accent-secondary: #334155;
+  --callisto-selection: #2563EB;
+  --callisto-canvas-bg: #FFFFFF;
+  --callisto-grid: #E2E8F0;
+  --callisto-sidebar-bg: #F8FAFC;
+  --callisto-panel-bg: #FFFFFF;
+  --callisto-text: #1E293B;
+  --callisto-text-secondary: #64748B;
+  --callisto-border: #CBD5E1;
+  --callisto-hover: #F1F5F9;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", "Segoe UI", Arial, sans-serif;
+  color: var(--callisto-text);
+  background-color: var(--callisto-canvas-bg);
+  overflow: hidden;
+}
+
+.font-mono,
+code,
+pre,
+.cm-editor {
+  font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace !important;
+}
+
+/* Crisp engineering scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--callisto-border);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--callisto-text-secondary);
+}
+
+/* XYFlow overrides for engineering precision */
+.react-flow {
+  color-scheme: light only;
+  background-color: #FFFFFF !important;
+  --xy-background-color: #FFFFFF;
+  --xy-background-color-default: #FFFFFF;
+  --xy-minimap-background-color: #FFFFFF;
+  --xy-minimap-mask-background-color: rgba(241, 245, 249, 0.65);
+  --xy-edge-label-background-color: #FFFFFF;
+}
+
+.react-flow__background {
+  background-color: #FFFFFF !important;
+}
+
+.react-flow__node {
+  border-radius: 0;
+}
+
+.react-flow__handle {
+  width: 7px;
+  height: 7px;
+  background: #ffffff;
+  border: 1.5px solid #2563EB;
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity 0.12s ease;
+}
+
+.react-flow__node:hover .react-flow__handle,
+.react-flow__node.selected .react-flow__handle,
+.react-flow__handle-connecting {
+  opacity: 1;
+}
+
+.react-flow__selection {
+  background: rgba(37, 99, 235, 0.08);
+  border: 1px solid #2563EB;
+}
